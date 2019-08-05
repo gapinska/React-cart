@@ -22,9 +22,9 @@ class App extends React.Component{
   render(){
     return(
       <>
-      <button disabled={this.state.shoppingCart ? false : true} onClick={this.handleRemoveFromCart}>-</button>
+      <button  disabled={this.state.shoppingCart ? false : true} onClick={this.handleRemoveFromCart}>-</button>
       <span> {this.state.shoppingCart} </span>
-      <button onClick= {this.handleAddToCart}>+</button>
+      <button disabled= {this.state.shoppingCart === this.state.availableProducts ? true: false} onClick= {this.handleAddToCart}>+</button>
       </>
     )
   }
